@@ -1,0 +1,20 @@
+C:\Users\RnD08\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.6
+
+Read Flash Memory :-
+esptool --port COM4 --baud 921600 flash_id
+
+esptool --port COM4 --baud 921600 read_flash 0 0x400000 fileread.bin
+
+
+Read bin file Write Flash 
+
+esptool.exe --chip esp32 --port COM4 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 H:\Blink.ino.bin
+
+Direct Bin file upload :
+esptool -p COM4 write_flash 0x1000 filename.bin
+
+
+
+Erase Memory ;
+
+python -m esptool --chip esp32 --port yourport --baud 115200 --after hard_reset erase_flash
