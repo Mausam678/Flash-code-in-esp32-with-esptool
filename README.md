@@ -71,12 +71,6 @@ python -m esptool --chip esp32 --port COM4 --baud 115200 --after hard_reset eras
 
 ## 4. Project Commands
 
-You can find the esptool at the following location on your system:
-
-```plaintext
-C:\Users\RnD08\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.6
-```
-
 Here’s a summary of commands used in this project:
 
 - **Read Flash Memory**:
@@ -85,14 +79,14 @@ Here’s a summary of commands used in this project:
   esptool --port COM4 --baud 921600 read_flash 0 0x400000 fileread.bin
   ```
 
-- **Read BIN File and Write to Flash**:
-  ```bash
-  esptool.exe --chip esp32 --port COM4 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 H:\Blink.ino.bin
-  ```
-
 - **Direct BIN File Upload**:
   ```bash
   esptool -p COM4 write_flash 0x1000 filename.bin
+  ```
+
+  - **Read BIN File and Write to Flash**:
+  ```bash
+  esptool.exe --chip esp32 --port COM4 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 H:\Blink.ino.bin
   ```
 
 - **Erase Memory**:
