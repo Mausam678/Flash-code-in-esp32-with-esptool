@@ -57,10 +57,10 @@ This command flashes the `Blink.ino.bin` file starting at address `0x0` on the E
 If you want a quicker way to upload a .bin file without specifying detailed parameters:
 
 ```bash
-esptool -p COM4 write_flash 0x1000 filename.bin
+esptool -p COM4 write_flash 0x10000 filename.bin
 ```
 
-This command flashes the `filename.bin` file starting at address `0x1000`.
+This command flashes the `filename.bin` file starting at address `0x10000`.
 
 ### 3. Erasing Flash Memory
 
